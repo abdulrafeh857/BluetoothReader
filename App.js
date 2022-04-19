@@ -83,7 +83,7 @@ const App = () => {
       console.log(`App::BLUETOOTH Status: ${enabled}`);
       setBluetoothEnabled(enabled);
       if (!enabled) {
-        bluetoothFunc();
+   //     bluetoothFunc();
       }
     } catch (error) {
       console.log(' \n\n\n  App::BLUETOOTH Status Error: ', error);
@@ -133,7 +133,7 @@ const App = () => {
 
   const onStateChanged = stateChangedEvent => {
     console.log(
-      'App::onStateChanged event used for onBluetoothEnabled and onBluetoothDisabled',
+      'App::onStateChanged event used for onBluetoothEnabled and onBluetoothDisabled',stateChangedEvent
     );
     setBluetoothEnabled(stateChangedEvent.enabled);
     setDevice(stateChangedEvent.enabled ? device : undefined);

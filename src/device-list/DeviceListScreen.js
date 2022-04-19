@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import {Alert, Platform} from 'react-native';
+import React from "react";
+import { Alert, Platform } from "react-native";
 import {
   Body,
   Container,
@@ -12,16 +12,16 @@ import {
   Toast,
   Header,
   Title,
-} from 'native-base';
-import RNBluetoothClassic from 'react-native-bluetooth-classic';
+} from "native-base";
+import RNBluetoothClassic from "react-native-bluetooth-classic";
 import {
   PermissionsAndroid,
   View,
   FlatList,
   TouchableOpacity,
   StyleSheet,
-} from 'react-native';
-import BluetoothStateManager from 'react-native-bluetooth-state-manager';
+} from "react-native";
+import BluetoothStateManager from "react-native-bluetooth-state-manager";
 
 /**
  * See https://reactnative.dev/docs/permissionsandroid for more information
@@ -31,14 +31,14 @@ const requestAccessFineLocationPermission = async () => {
   const granted = await PermissionsAndroid.request(
     PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
     {
-      title: 'Access fine location required for discovery',
+      title: "Access fine location required for discovery",
       message:
-        'In order to perform discovery, you must enable/allow ' +
-        'fine location access.',
-      buttonNeutral: 'Ask Me Later',
-      buttonNegative: 'Cancel',
-      buttonPositive: 'OK',
-    },
+        "In order to perform discovery, you must enable/allow " +
+        "fine location access.",
+      buttonNeutral: "Ask Me Later",
+      buttonNegative: "Cancel",
+      buttonPositive: "OK",
+    }
   );
   return granted === PermissionsAndroid.RESULTS.GRANTED;
 };
@@ -56,7 +56,7 @@ const requestAccessFineLocationPermission = async () => {
  * @author kendavidson
  *
  */
-const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
+const DeviceListScreen = ({ bluetoothEnabled, selectDevice }) => {
   const [devices, setDevices] = React.useState([]);
   const [accepting, setAccepting] = React.useState(false);
   const [discovering, setDiscovering] = React.useState(false);
@@ -77,11 +77,12 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
   /**
    * Gets the currently bonded devices.
    */
-  const getBondedDevices = async unloading => {
-    console.log('DeviceListScreen::getBondedDevices');
+  const getBondedDevices = async (unloading) => {
+    console.log("DeviceListScreen::getBondedDevices");
+    
     try {
       let bonded = await RNBluetoothClassic.getBondedDevices();
-      console.log('DeviceListScreen::getBondedDevices found', bonded);
+      console.log("DeviceListScreen::getBondedDevices found", bonded);
 
       if (!unloading) {
         setDevices(bonded);
@@ -103,7 +104,7 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
   const acceptConnections = async () => {
     if (accepting) {
       Toast.show({
-        text: 'Already accepting connections',
+        text: "Already accepting connections",
         duration: 5000,
       });
 
@@ -112,7 +113,7 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
     setAccepting(true);
 
     try {
-      let device = await RNBluetoothClassic.accept({delimiter: '\r'});
+      let device = await RNBluetoothClassic.accept({ delimiter: "\r" });
       if (device) {
         selectDevice(device);
       }
@@ -122,7 +123,7 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
       // side but for now this gives more options.
       if (!accepting) {
         Toast.show({
-          text: 'Attempt to accept connection failed.',
+          text: "Attempt to accept connection failed.",
           duration: 5000,
         });
       }
@@ -145,7 +146,7 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
       setAccepting(!cancelled);
     } catch (error) {
       Toast.show({
-        text: 'Unable to cancel accept connection',
+        text: "Unable to cancel accept connection",
         duration: 2000,
       });
     }
@@ -156,9 +157,9 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
       let granted = await requestAccessFineLocationPermission();
 
       if (!granted) {
-        throw new Error('Access fine location was not granted');
+        throw new Error("Access fine location was not granted");
       }
-      console.log('discovering...');
+      console.log("discovering...");
       setDiscovering(true);
 
       let device = [...devices];
@@ -166,15 +167,15 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
       try {
         let unpaired = await RNBluetoothClassic.startDiscovery();
 
-        let index = device.findIndex(d => !d.bonded);
+        let index = device.findIndex((d) => !d.bonded);
         if (index >= 0) {
           device.splice(index, device.length - index, ...unpaired);
-          console.log('\n\n index >= 0 \n\n', device);
+          console.log("\n\n index >= 0 \n\n", device);
         } else {
           device.push(...unpaired);
           console.log(
-            '\n\n adding unpaired devices to end of list\n\n',
-            ...unpaired,
+            "\n\n adding unpaired devices to end of list\n\n",
+            ...unpaired
           );
         }
 
@@ -183,7 +184,7 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
           duration: 2000,
         });
       } finally {
-        console.log('\n\n unpaired devices\n\n', device);
+        console.log("\n\n unpaired devices\n\n", device);
         setDevices(device);
         setDiscovering(false);
       }
@@ -199,7 +200,7 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
     try {
     } catch (error) {
       Toast.show({
-        text: 'Error occurred while attempting to cancel discover devices',
+        text: "Error occurred while attempting to cancel discover devices",
         duration: 2000,
       });
     }
@@ -208,7 +209,7 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
   const requestEnabled = async () => {
     try {
       Alert.alert(
-        'read the documentation and see how to  enable bluetooth device',
+        "read the documentation and see how to  enable bluetooth device"
       );
     } catch (error) {
       Toast.show({
@@ -227,7 +228,7 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
   };
 
   const toggleDiscovery = () => {
-    console.log('toggle discovering');
+    console.log("toggle discovering");
     if (discovering) {
       cancelDiscovery();
     } else {
@@ -243,7 +244,12 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
         </Body>
         {bluetoothEnabled ? (
           <Right>
-            <Button transparent onPress={this.getBondedDevices}>
+            <Button
+              transparent
+              onPress={() => {
+                getBondedDevices();
+              }}
+            >
               <Icon type="Ionicons" name="md-sync" />
             </Button>
           </Right>
@@ -252,7 +258,7 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
       {bluetoothEnabled ? (
         <>
           <DeviceList devices={devices} onPress={selectDevice} />
-          {Platform.OS !== 'ios' ? (
+          {Platform.OS !== "ios" ? (
             <View>
               {/* <Button block onPress={() => toggleAccept()}>
                 <Text>
@@ -261,7 +267,7 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
               </Button> */}
               <Button block onPress={() => toggleDiscovery()}>
                 <Text>
-                  {discovering ? 'Discovering (cancel)...' : 'Discover Devices'}
+                  {discovering ? "Discovering (cancel)..." : "Discover Devices"}
                 </Text>
               </Button>
             </View>
@@ -286,10 +292,10 @@ const DeviceListScreen = ({bluetoothEnabled, selectDevice}) => {
  * @param {function} onPress
  * @param {function} onLongPress
  */
-export const DeviceList = ({devices, onPress, onLongPress}) => {
-  const renderItem = ({item}) => {
-    console.log('item');
-    console.log(item);
+export const DeviceList = ({ devices, onPress, onLongPress }) => {
+  const renderItem = ({ item }) => {
+    // console.log("item");
+    // console.log(item);
     return (
       <DeviceListItem
         device={item}
@@ -303,14 +309,14 @@ export const DeviceList = ({devices, onPress, onLongPress}) => {
     <FlatList
       data={devices}
       renderItem={renderItem}
-      keyExtractor={item => (item ? item.address : 'key')}
+      keyExtractor={(item) => (item ? item.address : "key")}
     />
   );
 };
 
-export const DeviceListItem = ({device, onPress, onLongPress}) => {
-  let bgColor = device?.connected ? '#0f0' : '#fff';
-  let icon = device?.bonded ? 'ios-bluetooth' : 'ios-cellular';
+export const DeviceListItem = ({ device, onPress, onLongPress }) => {
+  let bgColor = device?.connected ? "#0f0" : "#fff";
+  let icon = device?.bonded ? "ios-bluetooth" : "ios-cellular";
 
   return (
     <>
@@ -318,13 +324,14 @@ export const DeviceListItem = ({device, onPress, onLongPress}) => {
         <TouchableOpacity
           onPress={() => onPress(device)}
           onLongPress={() => onLongPress(device)}
-          style={styles.deviceListItem}>
+          style={styles.deviceListItem}
+        >
           <View style={styles.deviceListItemIcon}>
             <Icon type="Ionicons" name={icon} color={bgColor} />
           </View>
           <View>
-            <Text>{device.name ? device.name : 'No Device Name'}</Text>
-            <Text note>{device.address ? device.address : 'No Address'}</Text>
+            <Text>{device.name ? device.name : "No Device Name"}</Text>
+            <Text note>{device.address ? device.address : "No Address"}</Text>
           </View>
         </TouchableOpacity>
       ) : null}
@@ -334,9 +341,9 @@ export const DeviceListItem = ({device, onPress, onLongPress}) => {
 
 const styles = StyleSheet.create({
   deviceListItem: {
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
     paddingHorizontal: 8,
     paddingVertical: 8,
   },
@@ -346,8 +353,8 @@ const styles = StyleSheet.create({
   },
   center: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 export default DeviceListScreen;
