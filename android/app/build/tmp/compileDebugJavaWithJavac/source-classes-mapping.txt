@@ -1,0 +1,14 @@
+com/bluetooth/MainActivity.java
+ com.bluetooth.MainActivity
+com/bluetooth/ReactNativeFlipper.java
+ com.bluetooth.ReactNativeFlipper
+ com.bluetooth.ReactNativeFlipper$1
+ com.bluetooth.ReactNativeFlipper$2
+ com.bluetooth.ReactNativeFlipper$2$1
+com/bluetooth/BuildConfig.java
+ com.bluetooth.BuildConfig
+com/bluetooth/MainApplication.java
+ com.bluetooth.MainApplication
+ com.bluetooth.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

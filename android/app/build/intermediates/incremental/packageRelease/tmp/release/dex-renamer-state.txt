@@ -1,0 +1,4 @@
+#Fri Apr 08 16:56:42 PKT 2022
+base.0=/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

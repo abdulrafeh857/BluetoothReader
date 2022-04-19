@@ -1,0 +1,9 @@
+com/bluetooth/MainActivity.java
+ com.bluetooth.MainActivity
+com/bluetooth/BuildConfig.java
+ com.bluetooth.BuildConfig
+com/bluetooth/MainApplication.java
+ com.bluetooth.MainApplication
+ com.bluetooth.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
