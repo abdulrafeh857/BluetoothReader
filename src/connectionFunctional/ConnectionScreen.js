@@ -4,8 +4,8 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import React, {useEffect, useState} from 'react';
-import RNBluetoothClassic from 'react-native-bluetooth-classic';
+import React, { useEffect, useState } from "react";
+import RNBluetoothClassic from "react-native-bluetooth-classic";
 import {
   Container,
   Text,
@@ -17,16 +17,17 @@ import {
   Title,
   Subtitle,
   Right,
-} from 'native-base';
+} from "native-base";
 import {
   FlatList,
   View,
   StyleSheet,
   TextInput,
   TouchableOpacity,
-} from 'react-native';
-import {Buffer} from 'buffer';
-import sendDataApi from '../Api/sendDataApi';
+} from "react-native";
+import moment from "moment";
+import { Buffer } from "buffer";
+import sendDataApi from "../Api/sendDataApi";
 /**
  * Manages a selected device connection.  The selected Device should
  * be provided as {@code props.device}, the device will be connected
@@ -34,13 +35,14 @@ import sendDataApi from '../Api/sendDataApi';
  *
  * @author rafeh
  */
-const ConnectionScreen = props => {
+const ConnectionScreen = (props) => {
   const [text, setText] = useState(undefined);
+  const [receieveText, setReceieveText] = useState();
   const [data, setData] = useState([]);
   const [polling, setPolling] = useState(false);
   const [connection, setConnection] = useState(false);
   const [connectionOptions, setConnectionOptions] = useState({
-    DELIMITER: '9',
+    DELIMITER: "9",
   });
   var readInterval;
   var readSubscription;
@@ -64,7 +66,7 @@ const ConnectionScreen = props => {
           // await props.device.disconnect();
           props.device.disconnect();
         } catch (error) {
-          console.log('\n\n Unable to disconnect from device');
+          console.log("\n\n Unable to disconnect from device");
           // Unable to disconnect from device
         }
       }
@@ -80,22 +82,22 @@ const ConnectionScreen = props => {
         addData({
           data: `Attempting connection to ${props.device.address}`,
           timestamp: new Date(),
-          type: 'error',
+          type: "error",
         });
 
-        console.log('\n\n\n connectionOptions = ', connectionOptions);
+        console.log("\n\n\n connectionOptions = ", connectionOptions);
         connected = await props.device.connect();
 
         addData({
-          data: 'Connection successful',
+          data: "Connection successful",
           timestamp: new Date(),
-          type: 'info',
+          type: "info",
         });
       } else {
         addData({
           data: `Connected to ${props.device.address}`,
           timestamp: new Date(),
-          type: 'error',
+          type: "error",
         });
       }
       setConnection(connected);
@@ -104,20 +106,20 @@ const ConnectionScreen = props => {
       addData({
         data: `Connection failed: ${error.message}`,
         timestamp: new Date(),
-        type: 'error',
+        type: "error",
       });
     }
   };
-  const disconnect = async disconnected => {
+  const disconnect = async (disconnected) => {
     try {
       if (!disconnected) {
         disconnected = await props.device.disconnect();
       }
 
       addData({
-        data: 'Disconnected',
+        data: "Disconnected",
         timestamp: new Date(),
-        type: 'info',
+        type: "info",
       });
 
       setConnection(!disconnected);
@@ -125,7 +127,7 @@ const ConnectionScreen = props => {
       addData({
         data: `Disconnect failed: ${error.message}`,
         timestamp: new Date(),
-        type: 'error',
+        type: "error",
       });
     }
 
@@ -134,15 +136,15 @@ const ConnectionScreen = props => {
   };
   const initializeRead = async () => {
     var disconnectSubscription = RNBluetoothClassic.onDeviceDisconnected(() =>
-      disconnect(true),
+      disconnect(true)
     );
 
     if (polling) {
       readInterval = setInterval(() => performRead(), 5000);
     } else {
-      readSubscription = props.device.onDataReceived(data => {
+      readSubscription = props.device.onDataReceived((data) => {
         onReceivedData(data);
-        console.log('\n\n onReceivedData data', data);
+        console.log("\n\n onReceivedData data", data);
       });
     }
   };
@@ -161,7 +163,7 @@ const ConnectionScreen = props => {
 
   const performRead = async () => {
     try {
-      console.log('Polling for available messages');
+      console.log("Polling for available messages");
       let available = await props.device.available();
       console.log(`There is data available [${available}], attempting read`);
 
@@ -172,7 +174,7 @@ const ConnectionScreen = props => {
 
           console.log(`Read data ${data}`);
           console.log(data);
-          onReceivedData({data});
+          onReceivedData({ data });
         }
       }
     } catch (err) {
@@ -185,22 +187,27 @@ const ConnectionScreen = props => {
    *
    * @param {ReadEvent} event
    */
-  const onReceivedData = async event => {
-    console.log('\n\n onReceivedData == ', event);
+  const onReceivedData = async (event) => {
+    console.log("\n\n onReceivedData == ", event);
+
     // call API here
-    // sendDataApi();
+    sendDataApi(event);
     event.timestamp = new Date();
     addData({
       ...event,
       timestamp: new Date(),
-      type: 'receive',
+      type: "receive",
     });
   };
 
-  const addData = async message => {
-    console.log('\n\n\n  addData === ', [message, ...data]);
-
-    setData([message, ...data]);
+  const addData = async (message) => {
+    setReceieveText(message);
+    // console.log("\n\n\n  addData message === ", message);
+    // console.log("\n\n\n  addData  DATA === ", data);
+    // let arr = [...data];
+    // arr.push(message);
+    // setData(arr);
+    console.log("\n\n\n  addData ARR === ", message);
   };
 
   /**
@@ -211,18 +218,18 @@ const ConnectionScreen = props => {
     try {
       console.log(`Attempting to send data ${text}`);
       console.log(`To Device = ${props.device.name}`);
-      let message = text + '\r';
+      let message = text + "\r";
       await RNBluetoothClassic.writeToDevice(props.device.address, message);
 
       addData({
         timestamp: new Date(),
         data: text,
-        type: 'sent',
+        type: "sent",
       });
 
       setText(undefined);
     } catch (error) {
-      console.log('\n\n\n sendData error ', error);
+      console.log("\n\n\n sendData error ", error);
     }
   };
 
@@ -233,7 +240,7 @@ const ConnectionScreen = props => {
       connect();
     }
   };
-  let toggleIcon = connection ? 'radio-button-on' : 'radio-button-off';
+  let toggleIcon = connection ? "radio-button-on" : "radio-button-off";
 
   return (
     <Container>
@@ -254,27 +261,32 @@ const ConnectionScreen = props => {
         </Right>
       </Header>
       <View style={styles.connectionScreenWrapper}>
-        <FlatList
+        <Text>{JSON.stringify(receieveText)}</Text>
+        <View style={styles.connectionScreenOutput}></View>
+        {/* <FlatList
           style={styles.connectionScreenOutput}
-          contentContainerStyle={{justifyContent: 'flex-end'}}
+          contentContainerStyle={{ justifyContent: "flex-end" }}
           inverted
           //    ref="scannedDataList"
           data={data}
-          keyExtractor={item => item.timestamp.toISOString()}
-          renderItem={({item}) => (
+          keyExtractor={(item) => item.timestamp.toISOString()}
+          renderItem={({ item }) => (
             <View
               id={item.timestamp.toISOString()}
-              flexDirection={'row'}
-              justifyContent={'flex-start'}>
-              <Text>{item.timestamp.toLocaleDateString()}</Text>
-              <Text>{item.type === 'sent' ? ' < ' : ' > '}</Text>
+              flexDirection={"row"}
+              justifyContent={"flex-start"}
+            >
+              <Text>
+                {moment(item.timestamp).format("DD-MM-YYYY HH:MM:SS")}
+              </Text>
+              <Text>{item.type === "sent" ? " < " : " > "}</Text>
               <Text flexShrink={1}>{item.data}</Text>
             </View>
           )}
-        />
+        /> */}
         <InputArea
           text={text}
-          onChangeText={text => setText(text)}
+          onChangeText={(text) => setText(text)}
           onSend={() => sendData()}
           disabled={!connection}
         />
@@ -282,13 +294,13 @@ const ConnectionScreen = props => {
     </Container>
   );
 };
-const InputArea = ({text, onChangeText, onSend, disabled}) => {
+const InputArea = ({ text, onChangeText, onSend, disabled }) => {
   let style = disabled ? styles.inputArea : styles.inputAreaConnected;
   return (
     <View style={style}>
       <TextInput
         style={styles.inputAreaTextInput}
-        placeholder={'Command/Text'}
+        placeholder={"Command/Text"}
         value={text}
         onChangeText={onChangeText}
         autoCapitalize="none"
@@ -300,7 +312,8 @@ const InputArea = ({text, onChangeText, onSend, disabled}) => {
       <TouchableOpacity
         style={styles.inputAreaSendButton}
         onPress={onSend}
-        disabled={disabled}>
+        disabled={disabled}
+      >
         <Text>Send</Text>
       </TouchableOpacity>
     </View>
@@ -319,16 +332,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   inputArea: {
-    flexDirection: 'row',
-    alignContent: 'stretch',
-    backgroundColor: '#ccc',
+    flexDirection: "row",
+    alignContent: "stretch",
+    backgroundColor: "#ccc",
     paddingHorizontal: 16,
     paddingVertical: 6,
   },
   inputAreaConnected: {
-    flexDirection: 'row',
-    alignContent: 'stretch',
-    backgroundColor: '#90EE90',
+    flexDirection: "row",
+    alignContent: "stretch",
+    backgroundColor: "#90EE90",
     paddingHorizontal: 16,
     paddingVertical: 6,
   },
@@ -337,7 +350,7 @@ const styles = StyleSheet.create({
     height: 40,
   },
   inputAreaSendButton: {
-    justifyContent: 'center',
+    justifyContent: "center",
     flexShrink: 1,
   },
 });

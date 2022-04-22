@@ -6,16 +6,16 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import {Root, StyleProvider} from 'native-base';
-import RNBluetoothClassic from 'react-native-bluetooth-classic';
-import getTheme from './native-base-theme/components';
-import platform from './native-base-theme/variables/platform';
-import ConnectionScreen from './src/connection/ConnectionScreen';
-import ConnectionScreenFunc from './src/connectionFunctional/ConnectionScreen';
-import DeviceListScreen from './src/device-list/DeviceListScreen';
-import {Text, TouchableOpacity} from 'react-native';
-import BluetoothStateManager from 'react-native-bluetooth-state-manager';
+import React from "react";
+import { Root, StyleProvider } from "native-base";
+import RNBluetoothClassic from "react-native-bluetooth-classic";
+import getTheme from "./native-base-theme/components";
+import platform from "./native-base-theme/variables/platform";
+import ConnectionScreen from "./src/connection/ConnectionScreen";
+import ConnectionScreenFunc from "./src/connectionFunctional/ConnectionScreen";
+import DeviceListScreen from "./src/device-list/DeviceListScreen";
+import { Text, TouchableOpacity } from "react-native";
+import BluetoothStateManager from "react-native-bluetooth-state-manager";
 
 const App = () => {
   const [device, setDevice] = React.useState(undefined);
@@ -31,8 +31,8 @@ const App = () => {
    *
    * @param device the BluetoothDevice selected or connected
    */
-  const selectDevice = device => {
-    console.log(' \n\n\n  App::selectDevice() called with: ', device);
+  const selectDevice = (device) => {
+    console.log(" \n\n\n  App::selectDevice() called with: ", device);
     setDevice(device);
   };
 
@@ -44,28 +44,26 @@ const App = () => {
    */
   React.useEffect(() => {
     console.log(
-      'App::componentDidMount adding listeners: onBluetoothEnabled and onBluetoothDistabled',
+      "App::componentDidMount adding listeners: onBluetoothEnabled and onBluetoothDistabled"
     );
     console.log(
-      'App::componentDidMount alternatively could use onStateChanged',
+      "App::componentDidMount alternatively could use onStateChanged"
     );
-    const enabledSubscription = RNBluetoothClassic.onBluetoothEnabled(event =>
-      onStateChanged(event),
+    const enabledSubscription = RNBluetoothClassic.onBluetoothEnabled((event) =>
+      onStateChanged(event)
     );
-    const disabledSubscription = RNBluetoothClassic.onBluetoothDisabled(event =>
-      onStateChanged(event),
+    const disabledSubscription = RNBluetoothClassic.onBluetoothDisabled(
+      (event) => onStateChanged(event)
     );
 
     checkBluetootEnabled();
-    setTimeout(() => {
-      acceptConnection();
-    }, 2000);
+
     return () => {
       console.log(
-        'App:componentWillUnmount removing subscriptions: enabled and distabled',
+        "App:componentWillUnmount removing subscriptions: enabled and distabled"
       );
       console.log(
-        'App:componentWillUnmount alternatively could have used stateChanged',
+        "App:componentWillUnmount alternatively could have used stateChanged"
       );
       enabledSubscription.remove();
       disabledSubscription.remove();
@@ -77,16 +75,19 @@ const App = () => {
    */
   const checkBluetootEnabled = async () => {
     try {
-      console.log(' \n\n\n  App::BLUETOOTH Checking bluetooth status');
+      console.log(" \n\n\n  App::BLUETOOTH Checking bluetooth status");
       let enabled = await RNBluetoothClassic.isBluetoothEnabled();
 
       console.log(`App::BLUETOOTH Status: ${enabled}`);
       setBluetoothEnabled(enabled);
+      setTimeout(() => {
+        acceptConnection(enabled);
+      }, 1000);
       if (!enabled) {
-   //     bluetoothFunc();
+        bluetoothFunc();
       }
     } catch (error) {
-      console.log(' \n\n\n  App::BLUETOOTH Status Error: ', error);
+      console.log(" \n\n\n  App::BLUETOOTH Status Error: ", error);
       setBluetoothEnabled(false);
     }
   };
@@ -100,56 +101,67 @@ const App = () => {
   const bluetoothFunc = async () => {
     var bluetoothPermission = false;
 
-    await BluetoothStateManager.getState().then(async bluetoothState => {
-      console.log('\n\n BLUETOOTH     ', bluetoothState);
+    await BluetoothStateManager.getState().then(async (bluetoothState) => {
+      console.log("\n\n BLUETOOTH     ", bluetoothState);
 
       setLoader(true);
-      if (bluetoothState === 'PoweredOn') {
+      if (bluetoothState === "PoweredOn") {
         setBluetoothEnabled(true);
         bluetoothPermission = true;
-        console.log('\n\n BLUETOOTH     ', bluetoothPermission);
+        console.log("\n\n BLUETOOTH     ", bluetoothPermission);
         setLoader(false);
-      } else if (bluetoothState === 'PoweredOff') {
+        acceptConnection(true);
+      } else if (bluetoothState === "PoweredOff") {
         await BluetoothStateManager.enable()
           .then(() => {
             setBluetoothEnabled(true);
             bluetoothPermission = true;
-            console.log('\n\n BLUETOOTH     ', bluetoothPermission);
+            console.log("\n\n BLUETOOTH     ", bluetoothPermission);
             setLoader(false);
+            acceptConnection(true);
           })
-          .catch(error => {
+          .catch((error) => {
             setBluetoothEnabled(false);
-            console.log('\n\n BLUETOOTH  CATCH   ', error);
+            console.log("\n\n BLUETOOTH  CATCH   ", error);
             setLoader(false);
+            acceptConnection(false);
           });
       } else {
         setBluetoothEnabled(false);
-        console.log('\n\n    BLUETOOTH IS ======', bluetoothState);
+        console.log("\n\n    BLUETOOTH IS ======", bluetoothState);
         bluetoothPermission = false;
         setLoader(false);
+        acceptConnection(false);
       }
     });
   };
 
-  const onStateChanged = stateChangedEvent => {
+  const onStateChanged = (stateChangedEvent) => {
     console.log(
-      'App::onStateChanged event used for onBluetoothEnabled and onBluetoothDisabled',stateChangedEvent
+      "App::onStateChanged event used for onBluetoothEnabled and onBluetoothDisabled",
+      stateChangedEvent
     );
     setBluetoothEnabled(stateChangedEvent.enabled);
     setDevice(stateChangedEvent.enabled ? device : undefined);
+    if (stateChangedEvent.enabled) {
+      acceptConnection(true);
+    } else {
+      acceptConnection(false);
+    }
   };
-  const acceptConnection = async () => {
-    if (bluetoothEnabled) {
-      console.log(' \n\n\n  \n\n ACCEPT CONNECTIONS');
+  const acceptConnection = async (check) => {
+    console.log(" \n\n\n  \n\n ACCEPT CONNECTIONS check === ", check);
+    if (check) {
+      console.log(" \n\n\n  \n\n ACCEPT CONNECTIONS");
       let connection = await RNBluetoothClassic.accept({
-        delimiter: '\r',
+        delimiter: "\r",
       });
       console.log(
-        ' \n\n\n  \n\n\n CONNECTION RNBluetoothModule.accept ',
-        connection,
+        " \n\n\n  \n\n\n CONNECTION RNBluetoothModule.accept ",
+        connection
       );
     } else {
-      console.log(' \n\n\n  \n\n BLUEOOTH FALSE NO ACCEPT CONNECTIONS');
+      console.log(" \n\n\n  \n\n BLUEOOTH FALSE NO ACCEPT CONNECTIONS");
     }
   };
   return (
