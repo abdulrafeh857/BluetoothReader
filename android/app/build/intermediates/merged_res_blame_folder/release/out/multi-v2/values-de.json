@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-de/values-de.xml",
+            "outputFile": "/Users/dev/Documents/GitHub/BluetoothReader/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-de/values-de.xml",
             "map": [
                 {
                     "source": "/Users/dev/.gradle/caches/transforms-3/b9897e67809a07f01cf6c8f71f9cd815/transformed/core-1.0.1/res/values-de/values-de.xml",

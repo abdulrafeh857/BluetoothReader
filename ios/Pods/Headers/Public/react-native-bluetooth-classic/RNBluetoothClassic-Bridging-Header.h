@@ -1,0 +1,1 @@
+../../../../../node_modules/react-native-bluetooth-classic/ios/RNBluetoothClassic-Bridging-Header.h

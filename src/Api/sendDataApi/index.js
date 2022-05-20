@@ -1,5 +1,5 @@
 const sendDataApi = async (event) => {
-  console.log("\n\n\n sendDataApi === ",event);
+  console.log("\n\n\n sendDataApi === ", event);
 
   var myHeaders = new Headers();
   myHeaders.append(
@@ -32,7 +32,12 @@ const sendDataApi = async (event) => {
     .then((response) => response.json())
     .then((result) => {
       console.log("\n\n\n RES API === ", result);
+      return result;
     })
-    .catch((error) => console.log("\n\n\n RES API error === ", error));
+    .catch((error) => {
+      console.log("\n\n\n RES API error === ", error);
+
+      return error.response;
+    });
 };
 export default sendDataApi;

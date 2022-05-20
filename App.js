@@ -14,9 +14,19 @@ import platform from "./native-base-theme/variables/platform";
 import ConnectionScreen from "./src/connection/ConnectionScreen";
 import ConnectionScreenFunc from "./src/connectionFunctional/ConnectionScreen";
 import DeviceListScreen from "./src/device-list/DeviceListScreen";
-import { Text, TouchableOpacity } from "react-native";
+import {
+  ActivityIndicator,
+  Text,
+  TouchableOpacity,
+  View,
+  ToastAndroid,
+} from "react-native";
 import BluetoothStateManager from "react-native-bluetooth-state-manager";
-
+import Modal from "react-native-modal";
+import {
+  responsiveHeight,
+  responsiveWidth,
+} from "react-native-responsive-dimensions";
 const App = () => {
   const [device, setDevice] = React.useState(undefined);
   const [bluetoothEnabled, setBluetoothEnabled] = React.useState(false);
@@ -43,6 +53,7 @@ const App = () => {
    * - determine if bluetooth is enabled (may be redundant with listener)
    */
   React.useEffect(() => {
+    setLoader(true);
     console.log(
       "App::componentDidMount adding listeners: onBluetoothEnabled and onBluetoothDistabled"
     );
@@ -109,7 +120,7 @@ const App = () => {
         setBluetoothEnabled(true);
         bluetoothPermission = true;
         console.log("\n\n BLUETOOTH     ", bluetoothPermission);
-        setLoader(false);
+
         acceptConnection(true);
       } else if (bluetoothState === "PoweredOff") {
         await BluetoothStateManager.enable()
@@ -117,20 +128,20 @@ const App = () => {
             setBluetoothEnabled(true);
             bluetoothPermission = true;
             console.log("\n\n BLUETOOTH     ", bluetoothPermission);
-            setLoader(false);
+
             acceptConnection(true);
           })
           .catch((error) => {
             setBluetoothEnabled(false);
             console.log("\n\n BLUETOOTH  CATCH   ", error);
-            setLoader(false);
+
             acceptConnection(false);
           });
       } else {
         setBluetoothEnabled(false);
         console.log("\n\n    BLUETOOTH IS ======", bluetoothState);
         bluetoothPermission = false;
-        setLoader(false);
+
         acceptConnection(false);
       }
     });
@@ -153,55 +164,64 @@ const App = () => {
     console.log(" \n\n\n  \n\n ACCEPT CONNECTIONS check === ", check);
     if (check) {
       console.log(" \n\n\n  \n\n ACCEPT CONNECTIONS");
-      let connection = await RNBluetoothClassic.accept({
-        delimiter: "\r",
-      });
-      console.log(
-        " \n\n\n  \n\n\n CONNECTION RNBluetoothModule.accept ",
-        connection
-      );
+      setLoader(false);
+
+      // let connection = await RNBluetoothClassic.accept({
+      //   delimiter: "\r",
+      // });
+      try {
+        let connection = await RNBluetoothClassic.accept({ delimiter: "" });
+        console.log(
+          " \n\n\n  \n\n\n CONNECTION RNBluetoothModule.accept ",
+          connection
+        );
+        ToastAndroid.show(
+          `Connected to ${connection.name}:`,
+          ToastAndroid.SHORT
+        );
+      } catch (error) {
+        console.log(
+          " \n\n\n  \n\n\n CONNECTION RNBluetoothModule.accept error ",
+          error
+        );
+      }
     } else {
+      setLoader(false);
+
       console.log(" \n\n\n  \n\n BLUEOOTH FALSE NO ACCEPT CONNECTIONS");
     }
   };
   return (
     <StyleProvider style={getTheme(platform)}>
       <Root>
+        <Modal
+          backdropOpacity={0.2}
+          isVisible={loader}
+          animationInTiming={1}
+          animationOutTiming={1}
+          style={{
+            width: responsiveWidth(150),
+            marginLeft: responsiveWidth(-22),
+          }}
+        >
+          <View
+            style={{
+              // flex: 1,
+              height: responsiveHeight(120),
+              // width: responsiveWidth(100),
+              backgroundColor: "rgba(0,0,0,0.1)",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <ActivityIndicator
+              size={"large"}
+              color={"#33f"}
+            ></ActivityIndicator>
+          </View>
+        </Modal>
         {!device ? (
           <>
-            {/* <TouchableOpacity
-              style={{
-                alignSelf: 'center',
-                marginTop: 10,
-                backgroundColor: '#00f',
-                padding: 5,
-                borderRadius: 5,
-                width: '40%',
-                alignItems: 'center',
-                justifyContent: 'center',
-                height: 40,
-                elevation: 8,
-              }}
-              //    disabled={!bluetoothAvailable || !bluetoothEnabled || discovering}
-              onPress={async () => {
-                console.log(' \n\n\n  \n\n ACCEPT CONNECTIONS');
-                let connection = await RNBluetoothClassic.accept({
-                  delimiter: '\r',
-                });
-                console.log(
-                  '\n\n\n CONNECTION RNBluetoothModule.accept ',
-                  connection,
-                );
-              }}>
-              <Text
-                style={{
-                  alignSelf: 'center',
-                  textAlign: 'center',
-                  color: '#fff',
-                }}>
-                Accept Connections
-              </Text>
-            </TouchableOpacity> */}
             <DeviceListScreen
               bluetoothEnabled={bluetoothEnabled}
               selectDevice={selectDevice}

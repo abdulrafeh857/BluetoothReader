@@ -1,0 +1,6 @@
+module react_native_bluetooth_classic {
+  umbrella header "react-native-bluetooth-classic-umbrella.h"
+
+  export *
+  module * { export * }
+}

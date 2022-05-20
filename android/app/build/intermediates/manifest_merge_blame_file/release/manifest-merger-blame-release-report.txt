@@ -6,65 +6,80 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml
+8-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml
+9-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:4:5-67
-11-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:4:22-64
+11-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:4:5-67
+11-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:4:22-64
 12    <uses-permission android:name="android.permission.BLUETOOTH" />
-12-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:5:5-67
-12-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:5:22-65
+12-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:5:5-67
+12-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:5:22-65
 13    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-13-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:6:5-73
-13-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:6:22-71
+13-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:6:5-73
+13-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:6:22-71
 14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-14-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:7:5-81
-14-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:7:22-78
-15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-15-->[:react-native-bluetooth-classic] /Users/dev/Documents/GitHub/rn-bluetooth-client/node_modules/react-native-bluetooth-classic/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:5-79
-15-->[:react-native-bluetooth-classic] /Users/dev/Documents/GitHub/rn-bluetooth-client/node_modules/react-native-bluetooth-classic/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:22-76
-16
-17    <application
-17-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:9:5-27:19
-18        android:name="com.bluetooth.MainApplication"
-18-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:10:7-38
-19        android:allowBackup="false"
-19-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:14:7-34
-20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.0.1] /Users/dev/.gradle/caches/transforms-3/b9897e67809a07f01cf6c8f71f9cd815/transformed/core-1.0.1/AndroidManifest.xml:22:18-86
-21        android:icon="@mipmap/ic_launcher"
-21-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:12:7-41
-22        android:label="@string/app_name"
-22-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:11:7-39
-23        android:roundIcon="@mipmap/ic_launcher_round"
-23-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:13:7-52
-24        android:theme="@style/AppTheme" >
-24-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:15:7-38
-25        <activity
-25-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:16:7-26:18
-26            android:name="com.bluetooth.MainActivity"
-26-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:17:9-37
-27            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-27-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:19:9-86
-28            android:label="@string/app_name"
-28-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:18:9-41
-29            android:launchMode="singleTask"
-29-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:20:9-40
-30            android:windowSoftInputMode="adjustResize" >
-30-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:21:9-51
-31            <intent-filter>
-31-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:22:9-25:25
-32                <action android:name="android.intent.action.MAIN" />
-32-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:23:13-65
-32-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:23:21-62
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:24:13-73
-34-->/Users/dev/Documents/GitHub/rn-bluetooth-client/android/app/src/main/AndroidManifest.xml:24:23-70
-35            </intent-filter>
-36        </activity>
-37    </application>
-38
-39</manifest>
+14-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:7:5-81
+14-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:7:22-78
+15
+16    <uses-feature
+16-->[:react-native-ble-manager] /Users/dev/Documents/GitHub/BluetoothReader/node_modules/react-native-ble-manager/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:5-13:36
+17        android:name="android.hardware.bluetooth_le"
+17-->[:react-native-ble-manager] /Users/dev/Documents/GitHub/BluetoothReader/node_modules/react-native-ble-manager/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:9-53
+18        android:required="false" />
+18-->[:react-native-ble-manager] /Users/dev/Documents/GitHub/BluetoothReader/node_modules/react-native-ble-manager/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:13:9-33
+19
+20    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+20-->[:react-native-bluetooth-classic] /Users/dev/Documents/GitHub/BluetoothReader/node_modules/react-native-bluetooth-classic/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:5-79
+20-->[:react-native-bluetooth-classic] /Users/dev/Documents/GitHub/BluetoothReader/node_modules/react-native-bluetooth-classic/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:22-76
+21
+22    <uses-feature
+22-->[:react-native-bluetooth-state-manager] /Users/dev/Documents/GitHub/BluetoothReader/node_modules/react-native-bluetooth-state-manager/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:5-13:36
+23        android:name="android.hardware.bluetooth"
+23-->[:react-native-bluetooth-state-manager] /Users/dev/Documents/GitHub/BluetoothReader/node_modules/react-native-bluetooth-state-manager/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:9-50
+24        android:required="false" />
+24-->[:react-native-bluetooth-state-manager] /Users/dev/Documents/GitHub/BluetoothReader/node_modules/react-native-bluetooth-state-manager/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:13:9-33
+25
+26    <application
+26-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:9:5-27:19
+27        android:name="com.bluetooth.MainApplication"
+27-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:10:7-38
+28        android:allowBackup="false"
+28-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:14:7-34
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.0.1] /Users/dev/.gradle/caches/transforms-3/b9897e67809a07f01cf6c8f71f9cd815/transformed/core-1.0.1/AndroidManifest.xml:22:18-86
+30        android:icon="@mipmap/ic_launcher"
+30-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:12:7-41
+31        android:label="@string/app_name"
+31-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:11:7-39
+32        android:roundIcon="@mipmap/ic_launcher_round"
+32-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:13:7-52
+33        android:theme="@style/AppTheme" >
+33-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:15:7-38
+34        <activity
+34-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:16:7-26:18
+35            android:name="com.bluetooth.MainActivity"
+35-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:17:9-37
+36            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+36-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:19:9-86
+37            android:label="@string/app_name"
+37-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:18:9-41
+38            android:launchMode="singleTask"
+38-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:20:9-40
+39            android:windowSoftInputMode="adjustResize" >
+39-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:21:9-51
+40            <intent-filter>
+40-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:22:9-25:25
+41                <action android:name="android.intent.action.MAIN" />
+41-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:23:13-65
+41-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:23:21-62
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:24:13-73
+43-->/Users/dev/Documents/GitHub/BluetoothReader/android/app/src/main/AndroidManifest.xml:24:23-70
+44            </intent-filter>
+45        </activity>
+46    </application>
+47
+48</manifest>

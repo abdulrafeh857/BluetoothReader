@@ -8,29 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* bluetoothTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* bluetoothTests.m */; };
+		088A0B99189F4B9AA5A59DD9 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F04AEA4EC1B4B60A009E8D6 /* FontAwesome.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		CC2572D13108404B8E3D554B /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E02B55AFACC1472D96EBB3D8 /* AntDesign.ttf */; };
-		A82607974EBF47949CDE63C1 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D64F303A34AF420D9A1FADB4 /* Entypo.ttf */; };
-		62F88682C8E24238B04B3D84 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D117F5050D254B6895751B6D /* EvilIcons.ttf */; };
+		16A4E486C21298AB0ECCBBFC /* libPods-bluetooth-bluetoothTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F031A67150E26462AC234417 /* libPods-bluetooth-bluetoothTests.a */; };
 		182E2643822D4EC7A24D49A2 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B888E77D560F49E991C4C7F9 /* Feather.ttf */; };
-		088A0B99189F4B9AA5A59DD9 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F04AEA4EC1B4B60A009E8D6 /* FontAwesome.ttf */; };
-		750DA5DB59D44D358DFF741C /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F659FE370D35468E995C9B06 /* FontAwesome5_Brands.ttf */; };
 		3B5851EAA12D49F68DF3C2E3 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA03418BE72946DE89F4B389 /* FontAwesome5_Regular.ttf */; };
-		DC5C6511B8E148E6B8F4632A /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33A9DDF7BCDE4304A027CA16 /* FontAwesome5_Solid.ttf */; };
-		718472D1014B4D72A932C44A /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48AABC8896C44BC9A84FB68B /* Fontisto.ttf */; };
-		68AC7004378846C8931D1AA3 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC904248EB3A43D2BA5957B6 /* Foundation.ttf */; };
-		936CC832AA9D4ECBA95021FA /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 945D19CB56AA43A6A36E3930 /* Ionicons.ttf */; };
 		496506C2F8594977A1857FE0 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0F43FA170134E109E4CAEA7 /* MaterialCommunityIcons.ttf */; };
-		919E5C8E8AD14B4E89A6C064 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A916DAF190A0422EADFCE49B /* MaterialIcons.ttf */; };
-		8AE069B843D0405DB3444D20 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 517510065FF544549DA78B2A /* Octicons.ttf */; };
-		DBDE3219F38A405582F0F379 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DACF4F2ED2C44728BAD0D8D3 /* Roboto_medium.ttf */; };
-		7F745EF1750C4E609EC110C0 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A862401C00D440F8B686F2CC /* Roboto.ttf */; };
+		62F88682C8E24238B04B3D84 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D117F5050D254B6895751B6D /* EvilIcons.ttf */; };
+		68AC7004378846C8931D1AA3 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC904248EB3A43D2BA5957B6 /* Foundation.ttf */; };
+		718472D1014B4D72A932C44A /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48AABC8896C44BC9A84FB68B /* Fontisto.ttf */; };
 		73A53685352F4D1B8ED8C64C /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEA8EEA8EF4248109C7A22C1 /* rubicon-icon-font.ttf */; };
-		C38CE6110DCE4F4E95BD905C /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F101EB27DC784FE8A1E37523 /* SimpleLineIcons.ttf */; };
+		750DA5DB59D44D358DFF741C /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F659FE370D35468E995C9B06 /* FontAwesome5_Brands.ttf */; };
+		7F745EF1750C4E609EC110C0 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A862401C00D440F8B686F2CC /* Roboto.ttf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8AE069B843D0405DB3444D20 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 517510065FF544549DA78B2A /* Octicons.ttf */; };
+		919E5C8E8AD14B4E89A6C064 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A916DAF190A0422EADFCE49B /* MaterialIcons.ttf */; };
+		936CC832AA9D4ECBA95021FA /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 945D19CB56AA43A6A36E3930 /* Ionicons.ttf */; };
 		9F798F3E4BFE4F44BE600892 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 135FEDE7D709494DBA8622BE /* Zocial.ttf */; };
+		A82607974EBF47949CDE63C1 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D64F303A34AF420D9A1FADB4 /* Entypo.ttf */; };
+		A8B04BF5774D8DF1C96B054B /* libPods-bluetooth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24EEAAE73945BE6ED412D256 /* libPods-bluetooth.a */; };
+		C38CE6110DCE4F4E95BD905C /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F101EB27DC784FE8A1E37523 /* SimpleLineIcons.ttf */; };
+		CC2572D13108404B8E3D554B /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E02B55AFACC1472D96EBB3D8 /* AntDesign.ttf */; };
+		DBDE3219F38A405582F0F379 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DACF4F2ED2C44728BAD0D8D3 /* Roboto_medium.ttf */; };
+		DC5C6511B8E148E6B8F4632A /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33A9DDF7BCDE4304A027CA16 /* FontAwesome5_Solid.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,33 +49,39 @@
 		00E356EE1AD99517003FC87E /* bluetoothTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bluetoothTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* bluetoothTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bluetoothTests.m; sourceTree = "<group>"; };
+		135FEDE7D709494DBA8622BE /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* bluetooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bluetooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = bluetooth/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = bluetooth/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = bluetooth/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = bluetooth/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = bluetooth/main.m; sourceTree = "<group>"; };
+		24EEAAE73945BE6ED412D256 /* libPods-bluetooth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bluetooth.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FF21935E9D19EE81EDE9A77 /* Pods-bluetooth-bluetoothTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bluetooth-bluetoothTests.release.xcconfig"; path = "Target Support Files/Pods-bluetooth-bluetoothTests/Pods-bluetooth-bluetoothTests.release.xcconfig"; sourceTree = "<group>"; };
+		33A9DDF7BCDE4304A027CA16 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		3F04AEA4EC1B4B60A009E8D6 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		48AABC8896C44BC9A84FB68B /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		4ED6DF65821BB405261EC8C7 /* Pods-bluetooth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bluetooth.release.xcconfig"; path = "Target Support Files/Pods-bluetooth/Pods-bluetooth.release.xcconfig"; sourceTree = "<group>"; };
+		517510065FF544549DA78B2A /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		7D5587FD76F1251A1964B2CA /* Pods-bluetooth-bluetoothTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bluetooth-bluetoothTests.debug.xcconfig"; path = "Target Support Files/Pods-bluetooth-bluetoothTests/Pods-bluetooth-bluetoothTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = bluetooth/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		945D19CB56AA43A6A36E3930 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		A862401C00D440F8B686F2CC /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
+		A916DAF190A0422EADFCE49B /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		B09B428A63475545A53876AB /* Pods-bluetooth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bluetooth.debug.xcconfig"; path = "Target Support Files/Pods-bluetooth/Pods-bluetooth.debug.xcconfig"; sourceTree = "<group>"; };
+		B0F43FA170134E109E4CAEA7 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		B888E77D560F49E991C4C7F9 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		CA03418BE72946DE89F4B389 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		D117F5050D254B6895751B6D /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		D64F303A34AF420D9A1FADB4 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		DACF4F2ED2C44728BAD0D8D3 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
+		DC904248EB3A43D2BA5957B6 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		DEA8EEA8EF4248109C7A22C1 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
+		E02B55AFACC1472D96EBB3D8 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		E02B55AFACC1472D96EBB3D8 /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D64F303A34AF420D9A1FADB4 /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D117F5050D254B6895751B6D /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B888E77D560F49E991C4C7F9 /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3F04AEA4EC1B4B60A009E8D6 /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F659FE370D35468E995C9B06 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CA03418BE72946DE89F4B389 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		33A9DDF7BCDE4304A027CA16 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		48AABC8896C44BC9A84FB68B /* Fontisto.ttf */ = {isa = PBXFileReference; name = "Fontisto.ttf"; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DC904248EB3A43D2BA5957B6 /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		945D19CB56AA43A6A36E3930 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B0F43FA170134E109E4CAEA7 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A916DAF190A0422EADFCE49B /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		517510065FF544549DA78B2A /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DACF4F2ED2C44728BAD0D8D3 /* Roboto_medium.ttf */ = {isa = PBXFileReference; name = "Roboto_medium.ttf"; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A862401C00D440F8B686F2CC /* Roboto.ttf */ = {isa = PBXFileReference; name = "Roboto.ttf"; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DEA8EEA8EF4248109C7A22C1 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F101EB27DC784FE8A1E37523 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		135FEDE7D709494DBA8622BE /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F031A67150E26462AC234417 /* libPods-bluetooth-bluetoothTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bluetooth-bluetoothTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F101EB27DC784FE8A1E37523 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		F659FE370D35468E995C9B06 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16A4E486C21298AB0ECCBBFC /* libPods-bluetooth-bluetoothTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B04BF5774D8DF1C96B054B /* libPods-bluetooth.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				24EEAAE73945BE6ED412D256 /* libPods-bluetooth.a */,
+				F031A67150E26462AC234417 /* libPods-bluetooth-bluetoothTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,6 +160,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				F25A1B3D8F954FCEB589FAC4 /* Resources */,
+				8C8F398B7B837FE163CA728C /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -163,8 +176,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8C8F398B7B837FE163CA728C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B09B428A63475545A53876AB /* Pods-bluetooth.debug.xcconfig */,
+				4ED6DF65821BB405261EC8C7 /* Pods-bluetooth.release.xcconfig */,
+				7D5587FD76F1251A1964B2CA /* Pods-bluetooth-bluetoothTests.debug.xcconfig */,
+				2FF21935E9D19EE81EDE9A77 /* Pods-bluetooth-bluetoothTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F25A1B3D8F954FCEB589FAC4 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				E02B55AFACC1472D96EBB3D8 /* AntDesign.ttf */,
 				D64F303A34AF420D9A1FADB4 /* Entypo.ttf */,
@@ -187,8 +212,8 @@
 				135FEDE7D709494DBA8622BE /* Zocial.ttf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -197,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "bluetoothTests" */;
 			buildPhases = (
+				791FC9D2D7EB3174E1DF0A06 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				609E1AD49CA8B13938AED489 /* [CP] Embed Pods Frameworks */,
+				E344747A0522CB7EC5611753 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,11 +243,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "bluetooth" */;
 			buildPhases = (
+				E6AD2A5FADED9CBFE7E04F38 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				1F303D0B69E02F02153359D7 /* [CP] Embed Pods Frameworks */,
+				6E239951CD6E019CC1EA1484 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,6 +350,118 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
+		1F303D0B69E02F02153359D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bluetooth/Pods-bluetooth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bluetooth/Pods-bluetooth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bluetooth/Pods-bluetooth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		609E1AD49CA8B13938AED489 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bluetooth-bluetoothTests/Pods-bluetooth-bluetoothTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bluetooth-bluetoothTests/Pods-bluetooth-bluetoothTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bluetooth-bluetoothTests/Pods-bluetooth-bluetoothTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E239951CD6E019CC1EA1484 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bluetooth/Pods-bluetooth-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bluetooth/Pods-bluetooth-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bluetooth/Pods-bluetooth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		791FC9D2D7EB3174E1DF0A06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bluetooth-bluetoothTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E344747A0522CB7EC5611753 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bluetooth-bluetoothTests/Pods-bluetooth-bluetoothTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bluetooth-bluetoothTests/Pods-bluetooth-bluetoothTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bluetooth-bluetoothTests/Pods-bluetooth-bluetoothTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6AD2A5FADED9CBFE7E04F38 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bluetooth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,6 +514,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D5587FD76F1251A1964B2CA /* Pods-bluetooth-bluetoothTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -397,6 +541,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FF21935E9D19EE81EDE9A77 /* Pods-bluetooth-bluetoothTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -420,6 +565,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B09B428A63475545A53876AB /* Pods-bluetooth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -445,6 +591,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ED6DF65821BB405261EC8C7 /* Pods-bluetooth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -499,6 +646,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -563,6 +711,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
