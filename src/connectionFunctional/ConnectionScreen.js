@@ -385,7 +385,7 @@ const ConnectionScreen = (props) => {
     setFareSum(fare);
     setExtraSum(extra);
     // call API here
-    sendDataApi(total);
+//    sendDataApi(total);
     console.log("\n\n\n fare ", fare);
     console.log("\n\n\n extra ", extra);
     console.log("\n\n\n total ", total);
